@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Book | Dena Tours Safari & Quadbike Adventure</title>
+<meta name="description" content="Contact Dena Tours to book a quad bike tour, Mambrui Dunes ride or Tsavo safari. Call or WhatsApp +254 794 902936.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">
+    <span>DENA TOURS</span>
+    <span>SAFARI &amp; QUADBIKE ADVENTURE</span>
+  </a>
+  <nav class="links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="tours.html">Tours &amp; Safaris</a>
+    <a href="quadbike.html">Quad Bikes</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="tel:+254794902936" class="nav-call">+254 794 902936</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+</header>
+
+<section class="page-hero">
+  <div class="mono">CONTACT &amp; BOOKING</div>
+  <h1 class="display">Let's plan<br>your adventure.</h1>
+  <p>Fill in the form and it opens a pre-filled WhatsApp message straight to us — no account or backend needed. Or just call.</p>
+</section>
+
+<section class="on-acacia">
+  <div class="grid grid-2" style="gap:40px; background:none;">
+
+    <form id="inquiryForm" class="form-card">
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email (optional)</label>
+        <input id="email" name="email" type="email">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="tour">Interested in</label>
+          <select id="tour" name="tour">
+            <option>Quad Bike Tours</option>
+            <option>Mambrui Dunes</option>
+            <option>Tsavo East Safari</option>
+            <option>Tsavo West Safari</option>
+            <option>Amboseli Safari</option>
+            <option>Maasai Mara Safari</option>
+            <option>Beach Excursion</option>
+            <option>Custom itinerary</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="guests">Number of guests</label>
+          <input id="guests" name="guests" type="number" min="1">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="date">Preferred date</label>
+        <input id="date" name="date" type="date">
+      </div>
+
+      <div class="field">
+        <label for="message">Anything else we should know?</label>
+        <textarea id="message" name="message" placeholder="Special requests, ages of guests, pick-up location..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-solid" style="width:100%; justify-content:center;">Send enquiry via WhatsApp</button>
+      <p class="form-note">This opens WhatsApp with your details filled in — nothing is sent until you press send there.</p>
+    </form>
+
+    <div class="info-card">
+      <div class="info-row">
+        <div class="mono">CALL OR WHATSAPP</div>
+        <a class="val" href="tel:+254794902936">+254 794 902936</a>
+      </div>
+      <div class="info-row">
+        <div class="mono">BASED IN</div>
+        <div class="val small">Malindi, Kenya</div>
+      </div>
+      <div class="info-row">
+        <div class="mono">HOURS</div>
+        <div class="val small">[Add your operating hours, e.g. 7am – 6pm daily]</div>
+      </div>
+      <div class="info-row">
+        <div class="mono">EMAIL</div>
+        <div class="val small">[Add a business email if you have one]</div>
+      </div>
+      <div class="info-row">
+        <div class="mono">FIND US</div>
+        <div class="val small">[Embed a Google Maps location once you have a fixed pick-up point or office]</div>
+      </div>
+      <a class="btn btn-outline" href="https://wa.me/254794902936" target="_blank" rel="noopener" style="justify-content:center;">Message on WhatsApp</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <span>DENA TOURS SAFARI &amp; QUADBIKE ADVENTURE</span>
+  <span>Malindi, Kenya · +254 794 902936</span>
+</footer>
+
+<a class="wa-float" href="https://wa.me/254794902936" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3C8.6 21.5 10.3 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 14.9 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.4-8.4 8.4z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
