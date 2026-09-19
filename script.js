@@ -18,6 +18,37 @@ document.addEventListener('DOMContentLoaded', () => {
     io.observe(path);
   }
 
+  // Gallery lightbox
+  const tiles = Array.from(document.querySelectorAll('.gallery-tile'));
+  const lightbox = document.getElementById('lightbox');
+  if (tiles.length && lightbox) {
+    const lbImg = document.getElementById('lightboxImg');
+    const lbCaption = document.getElementById('lightboxCaption');
+    let current = 0;
+
+    const show = (i) => {
+      current = (i + tiles.length) % tiles.length;
+      const tile = tiles[current];
+      lbImg.src = tile.dataset.full;
+      lbImg.alt = tile.dataset.caption || '';
+      lbCaption.textContent = tile.dataset.caption || '';
+    };
+    const open = (i) => { show(i); lightbox.hidden = false; document.body.style.overflow = 'hidden'; };
+    const close = () => { lightbox.hidden = true; document.body.style.overflow = ''; };
+
+    tiles.forEach((tile, i) => tile.addEventListener('click', () => open(i)));
+    lightbox.querySelector('.lightbox-close').addEventListener('click', close);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', () => show(current - 1));
+    lightbox.querySelector('.lightbox-next').addEventListener('click', () => show(current + 1));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+  }
+
   // Inquiry form -> WhatsApp message (no backend needed)
   const form = document.getElementById('inquiryForm');
   if (form) {
